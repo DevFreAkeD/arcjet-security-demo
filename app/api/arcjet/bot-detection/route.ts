@@ -1,5 +1,6 @@
 import { aj } from "@/lib/arcjet";
 import { detectBot } from "@arcjet/next";
+import { NextResponse } from "next/server";
 
 /**
  * Bot Detection API Route
@@ -50,9 +51,21 @@ export async function GET(req: Request) {
 
     // If bot traffic is detected, return 403 Forbidden
     if(decision.isDenied()) {
-        return new Response("[!] Bot Traffic Detected.", { status: 403 });
+        return NextResponse.json(
+            {
+              error: "[!] Bot Traffic Detected.",
+              reason: decision.reason, // Contains details about why it was flagged as a bot
+            },
+            { status: 403 }
+        );
     }
 
     // If traffic appears to be from a human, allow it
-    return new Response("[+] Human Traffic Allowed.", { status: 200 });
+    return NextResponse.json(
+        {
+            message: "[+] Human Traffic Allowed.",
+            reason: decision.reason, // Contains details about the decision
+        },
+        {status: 200}
+    );
 }
