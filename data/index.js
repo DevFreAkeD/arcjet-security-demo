@@ -1,10 +1,11 @@
-import { Bot, Gauge, Mail, Shield } from "lucide-react";
+import { Bot, Gauge, Mail, Shield, UserPlus } from "lucide-react";
 
 const demoIcons = {
     bot: <Bot className="w-6 h-6" />,
     gauge: <Gauge className="w-6 h-6" />,
     shield: <Shield className="w-6 h-6" />,
     email: <Mail className="w-6 h-6" />,
+    signup: <UserPlus className="w-6 h-6" />,
 };
 
 export const demos = [
@@ -28,8 +29,14 @@ export const demos = [
   },
   {
     title: "Email Validation",
-    description: "Validate & verify an email address and Prevent fake signups and reduce spam or fraudulent accounts efficiently.",
+    description: "Validate & verify an email address and prevent fake signups and reduce spam or fraudulent accounts efficiently.",
     href: "/demo/email-validation",
     icon: demoIcons.email,
+  },
+  {
+    title: "Signup Form Protection",
+    description: "Protect signup forms from abuse, bots, and disposable emails.",
+    href: "/demo/signup-form-protection",
+    icon: demoIcons.signup,
   },
 ];
