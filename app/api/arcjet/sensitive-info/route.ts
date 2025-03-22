@@ -41,7 +41,10 @@ export async function POST(req: Request) {
     // If sensitive information is detected, return a 403 Forbidden response
     if (decision.isDenied()) {
         return NextResponse.json(
-            { error: "[!] Sensitive Information Detected." },
+            {
+                error: "[!] Sensitive Information Detected.",
+                reason: decision.reason, // Added reason for sensitive information detection
+            },
             { status: 403 }
         );
     }
