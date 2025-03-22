@@ -1,4 +1,4 @@
-import { Bot, Gauge, Mail, Shield, UserPlus } from "lucide-react";
+import { Bot, Gauge, Lock, Mail, Shield, UserPlus } from "lucide-react";
 
 const demoIcons = {
     bot: <Bot className="w-6 h-6" />,
@@ -6,6 +6,7 @@ const demoIcons = {
     shield: <Shield className="w-6 h-6" />,
     email: <Mail className="w-6 h-6" />,
     signup: <UserPlus className="w-6 h-6" />,
+    sensitive: <Lock className="w-6 h-6" />,
 };
 
 export const demos = [
@@ -38,5 +39,12 @@ export const demos = [
     description: "Protect signup forms from abuse, bots, and disposable emails.",
     href: "/demo/signup-form-protection",
     icon: demoIcons.signup,
+  },
+  {
+    title: "Sensitive Info Protection",
+    description:
+      "Detect and prevent exposure of sensitive information like PII",
+    href: "/demo/sensitive-info",
+    icon: demoIcons.sensitive,
   },
 ];
