@@ -111,5 +111,6 @@ Each security feature has an **interactive demo page**:
 
 ---
 
-### 🔥Now you're all set to explore Arcjet Security in action!** Let me know if you need further refinements. 🚀
+🚀 **Built with ❤️ using Next.js.**  
+🔗 **Need help?** Feel free to open an [issue](https://github.com/DevFreAkeD/arcjet-security-demo/issues)!  
 
